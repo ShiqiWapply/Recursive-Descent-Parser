@@ -118,7 +118,7 @@ int decl_or_stmt()
 					printf("Error in decl_or_stmt:1");
 					exit(0);
 				}
-				//advance();//´ò³ö¡®}¡¯
+				//advance();//æ‰“å‡ºâ€˜}â€™
 			}
 		}
 		else if (tok == ',')
@@ -312,7 +312,7 @@ int parameter()
 {
 	type();
 	if(tok==ID)
-		advance();//Êä³öID
+		advance();//è¾“å‡ºID
 	else
 	{
 		printf("Error in parameter");
@@ -400,7 +400,7 @@ int statement()
 		advance();
 		if (tok == '(')
 		{
-			advance();//Êä³öexpr
+			advance();//è¾“å‡ºexpr
 			expr();
 			if (tok == ')')
 			{
@@ -421,6 +421,7 @@ int statement()
 		}
 		//return;
 	}
+	
 	else if (tok == WHILE)
 	{
 		advance();
@@ -554,7 +555,7 @@ int id_list()
 	}
 	while(tok == ',')
 	{
-		advance();//´ò³öID
+		advance();//æ‰“å‡ºID
 		if (tok == ID)
 		{
 			advance();
@@ -709,7 +710,7 @@ int primary_expr()
 				expr();
 				if (tok == ']')
 				{
-					advance();//Êä³ö]ºóÃæµÄ
+					advance();//è¾“å‡º]åé¢çš„
 				}
 				else
 				{
